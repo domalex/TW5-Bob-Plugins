@@ -1,0 +1,27 @@
+[submodule "Plugin-src/felixhayashi/TW5-TiddlyMap"]
+	path = Plugin-src/felixhayashi/TW5-TiddlyMap
+	url = https://github.com/felixhayashi/TW5-TiddlyMap.git
+[submodule "Plugin-src/felixhayashi/TW5-Vis.js"]
+	path = Plugin-src/felixhayashi/TW5-Vis.js
+	url = https://github.com/felixhayashi/TW5-Vis.js.git
+[submodule "Plugin-src/felixhayashi/TW5-HotZone"]
+	path = Plugin-src/felixhayashi/TW5-HotZone
+	url = https://github.com/felixhayashi/TW5-HotZone.git
+[submodule "Plugin-src/felixhayashi/TW5-TopStoryView"]
+	path = Plugin-src/felixhayashi/TW5-TopStoryView
+	url = https://github.com/felixhayashi/TW5-TopStoryView.git
+[submodule "Plugin-src/flibbles/tw5-relink"]
+	path = Plugin-src/flibbles/tw5-relink
+	url = https://github.com/flibbles/tw5-relink.git
+[submodule "Plugin-src/reidgould/tiddlywiki-dropboard"]
+	path = Plugin-src/reidgould/tiddlywiki-dropboard
+	url = https://github.com/reidgould/tiddlywiki-dropboard.git
+[submodule "Plugin-src/reidgould/tiddlywiki-shortid-plugin"]
+	path = Plugin-src/reidgould/tiddlywiki-shortid-plugin
+	url = https://github.com/reidgould/tiddlywiki-shortid-plugin.git
+[submodule "Plugin-src/snowgoon88/TW5-extendedit"]
+	path = Plugin-src/snowgoon88/TW5-extendedit
+	url = https://github.com/snowgoon88/TW5-extendedit.git
+[submodule "Plugin-src/tgrosinger/tw5-checklist"]
+	path = Plugin-src/tgrosinger/tw5-checklist
+	url = https://github.com/tgrosinger/tw5-checklist.git
