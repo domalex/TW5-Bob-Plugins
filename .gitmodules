@@ -25,3 +25,6 @@
 [submodule "Plugin-src/tgrosinger/tw5-checklist"]
 	path = Plugin-src/tgrosinger/tw5-checklist
 	url = https://github.com/tgrosinger/tw5-checklist.git
+[submodule "Plugin-src/solid-tiddlywiki-syncadaptor"]
+	path = Plugin-src/solid-tiddlywiki-syncadaptor
+	url = git@github.com:linonetwo/solid-tiddlywiki-syncadaptor.git
