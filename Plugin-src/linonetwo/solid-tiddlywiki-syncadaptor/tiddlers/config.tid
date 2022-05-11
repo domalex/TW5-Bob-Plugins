@@ -1,0 +1,66 @@
+title: $:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/config
+caption: SoLiD SyncAdaptor
+tags: [[$:/tags/ControlPanel/Saving]]
+
+\define lingo-base() $:/language/ControlPanel/Saving/SoLiD/Config
+
+\define example-and-refresh-button()
+<$reveal type="match" text="" state="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWContainers">
+  <<lingo Example>> /public/tiddlywiki/main.ttl
+</$reveal>
+<$reveal type="match" text="yes" state="$:/status/IsLoggedIn">
+<$reveal type="nomatch" text="" state="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWContainers">
+  <$button class="solid-button-small" style="margin-top: 15px" >
+    <$action-sendmessage $message="tm-server-refresh"/>
+    <<lingo Refresh>>
+  </$button>
+</$reveal>
+</$reveal>
+\end
+
+\define check-use-server-story-list()
+  <$action-sendmessage $message="tm-solid-use-server-story-list" />
+\end
+
+\define uncheck-use-server-story-list()
+  <$action-sendmessage $message="tm-solid-not-use-server-story-list" />
+\end
+
+<div class="solid-card">
+
+|<<lingo Field>>|<<lingo Value>>|
+|<<lingo TWContainers>>| <$edit-text class="solid-input solid-textarea" tiddler="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWContainers" tag="textarea" default="" />|
+|<<lingo TWReadableContainers>>| <$edit-text class="solid-input solid-textarea" tiddler="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWReadableContainers" tag="textarea" default="" />|
+|<<example-and-refresh-button>>|<<lingo TWContainersDescription>>|
+
+<$checkbox field="use-server-story-list" checked="yes" unchecked="no" default="yes" checkactions=<<check-use-server-story-list>> uncheckactions=<<uncheck-use-server-story-list>> >
+  <<lingo UseServerStoryList>>
+</$checkbox>
+
+</div>
+
+<$reveal type="match" text="yes" state="$:/status/IsLoggedIn">
+  <div class="solid-card">
+    <<lingo CurrentWebID>> {{$:/status/UserName}}
+    <<lingo CurrentWebIDDescription>>
+  </div>
+  <$button class="solid-button" style="margin-top: 15px" >
+    <$action-sendmessage $message="tm-logout"/>
+    <<lingo Logout>>
+  </$button>
+</$reveal>
+
+<$reveal type="nomatch" text="yes" state="$:/status/IsLoggedIn">
+  <$reveal type="nomatch" text="" state="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWContainers">
+    <$button class="solid-filled-button" >
+      <$action-sendmessage $message="tm-login-solid"/>
+      <<lingo Login>>
+    </$button>
+  </$reveal>
+  <$reveal type="match" text="" state="$:/plugins/linonetwo/solid-tiddlywiki-syncadaptor/TWContainers">
+    <$button class="solid-button-disabled" >
+      <<lingo CantLogin>>
+    </$button>
+  </$reveal>
+</$reveal>
+
